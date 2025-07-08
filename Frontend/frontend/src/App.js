@@ -1,63 +1,26 @@
-import React, { useState } from "react";
+// src/App.jsx
+import React from "react";
+import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+ // adjust path if needed
 import "./App.css";
+import Prediction from "./Components/Prediction/Prediction";
 
-function App() {
-  const [formData, setFormData] = useState({
-    Nitrogen: "",
-    Phosporus: "",
-    Potassium: "",
-    Temperature: "",
-    Humidity: "",
-    pH: "",
-    Rainfall: "",
-  });
-
-  const handleChange = (e) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
-  };
-
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-
-    const response = await fetch("http://localhost:5000/predict", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(formData),
-    });
-
-    const result = await response.json();
-    alert(`Prediction: ${result.prediction}`);
-  };
-
+const App = () => {
   return (
-    <div className="app-container">
-      <h1 className="title">Crop Recommendation System</h1>
+    <Router>
+      <div className="app-container">
+        <h1 className="title">Welcome to Smart Farming Dashboard</h1>
 
-      <div className="form-container">
-        <form onSubmit={handleSubmit}>
-          {["Nitrogen", "Phosporus", "Potassium", "Temperature", "Humidity", "pH", "Rainfall"].map((field) => (
-            <div className="form-group" key={field}>
-              <label>
-                {field}:
-                <input
-                  type="number"
-                  name={field}
-                  value={formData[field]}
-                  onChange={handleChange}
-                  step="0.1"
-                  required
-                />
-              </label>
-            </div>
-          ))}
+        <Link to="/predict">
+          <button className="navigate-button">Go to Prediction Page</button>
+        </Link>
 
-          <button type="submit">Predict Crop</button>
-        </form>
+        <Routes>
+          <Route path="/predict" element={<Prediction />} />
+        </Routes>
       </div>
-    </div>
+    </Router>
   );
-}
+};
 
 export default App;
