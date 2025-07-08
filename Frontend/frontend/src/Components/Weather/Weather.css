@@ -1,0 +1,261 @@
+.glassCard{
+  background:  rgba(225,225,225,0.18);
+  box-shadow:  0 8px 32px 0 rgba(31,38,135,0.37);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border-radius: 10px;
+  border: 1px solid rgba(225,225,225,0.18);
+}
+/* Weather.css */
+.weather-page {
+  width: 100vw;
+  height: 100vh;
+  color: white;
+  position: relative;
+  overflow: hidden;
+  padding: 1rem 2rem;
+  box-sizing: border-box;
+}
+
+.weather-navbar {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.weather-title {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.search-container {
+  background-color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.search-icon {
+  width: 24px;
+  height: 24px;
+}
+
+.search-input {
+  border: none;
+  outline: none;
+  font-size: 1rem;
+  color: #212121;
+  background: transparent;
+}
+
+.weather-main {
+  width: 100%;
+  margin-top: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5rem;
+  justify-content: center;
+  align-items: flex-start;
+  margin-left: 40px;
+}
+
+.mini-card-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+   width: auto;
+  justify-content: center;
+}
+.weather-background-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -10;
+  overflow: hidden;
+}
+
+.weather-background {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.weather-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4); /* darkish overlay */
+}
+.weather-card {
+  width: 25rem;
+  min-height: 30rem;
+  padding: 0.2rem;
+  border-radius: 1.5rem;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.25);
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.weather-top {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 0.5rem;
+  margin-top: 2rem;
+}
+
+.weather-icon {
+  width: 3.5rem;
+  height: 3.5rem;
+}
+
+.temperature {
+  font-size: 2.75rem;
+  font-weight: bold;
+}
+
+.location {
+  text-align: center;
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin-top: 0.5rem;
+}
+
+.date-time {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.9rem;
+  margin-top: 1rem;
+}
+
+.metrics {
+  display: flex;
+  justify-content: space-between;
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+.metric-box {
+  flex: 1;
+  padding: 0.75rem;
+  border-radius: 0.75rem;
+  text-align: center;
+  font-size: 0.95rem;
+  height: 65px;
+}
+
+.metric-box p {
+  margin-top: 0.4rem;
+  font-weight: normal;
+}
+
+.blue {
+  background-color: rgba(0, 119, 255, 0.8);
+}
+
+.green {
+  background-color: rgba(0, 180, 100, 0.8);
+}
+
+.heat-index {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1.25rem;
+  font-size: 1rem;
+}
+
+hr {
+  border: none;
+  height: 1px;
+  background-color: #ccc;
+  margin: 1rem 0;
+  opacity: 0.4;
+}
+
+.condition {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 500;
+  margin-top: 0.5rem;
+}
+
+.mini-card {
+  width: 10rem;
+  height: 12rem;
+  padding: 0.8rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 10px;
+  text-align: center;
+  color: white;
+  font-weight: 500;
+  transition: transform 0.2s ease-in-out;
+  margin: 0.5;
+}
+
+.mini-card:hover {
+  transform: scale(1.05);
+}
+
+.mini-day {
+  font-size: 0.95rem;
+  font-weight: bold;
+  margin-bottom: 0.25rem;
+}
+
+.mini-icon-wrapper {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+
+  align-items: center;
+   
+}
+.mini-card-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+
+.mini-icon {
+  width: 4rem;
+  height: 4rem;
+}
+
+.mini-temp {
+  font-weight: bold;
+  font-size: 1rem;
+  margin-top: 0.25rem;
+}
+
+/* Reuse the glass effect */
+.glassCard {
+  background: rgba(225, 225, 225, 0.18);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border-radius: 10px;
+  border: 1px solid rgba(225, 225, 225, 0.18);
+}
+
