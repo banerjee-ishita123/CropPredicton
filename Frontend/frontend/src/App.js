@@ -7,6 +7,8 @@ import Prediction from "./Components/Prediction/Prediction";
 import Weather from "./Components/Weather/Weather";
 import Home from "./Components/Home/Home";
 import { StateContextProvider } from "./Context";
+import Chatbot from "./Components/AI Chatbot/Chatbot";
+import Price from "./Components/Price/Price";
 
 const App = () => {
   return (
@@ -19,7 +21,8 @@ const App = () => {
         
       } />
         <Route path="/prediction" element={<Prediction />} />
-        
+        <Route path="/price" element={<Price />} />
+         <Route path="/chatbot" element={<Chatbot />} />
       </Routes>
     </Router>
   );

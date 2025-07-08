@@ -18,6 +18,9 @@ const Home = () => {
         <Link to="/price">
           <button>Market Price</button>
         </Link>
+        <Link to="/chatbot">
+          <button>AI Chatbot</button>
+        </Link>
       </div>
     </div>
   );
